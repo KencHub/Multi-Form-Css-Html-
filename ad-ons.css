@@ -1,0 +1,653 @@
+html {
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.3125rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2.652rem;
+  --font-size-4xl: 4rem;
+}
+/*_________ROOT__________*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* __________________FONT FAMILY_________________ */
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url(fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url(fonts/Ubuntu-Regular.ttf);
+}
+/* ______________________________________ */
+
+/* HIDDEN FROM MOBILE */
+.nxt-desc {
+  display: none;
+}
+/* 
+HIDE FOOTER DESKTOP FROM MOBILE */
+.desktop-footer {
+  display: none;
+}
+.desc-nxt-icon {
+  display: none;
+}
+
+/* _______________CONTAINER________________ */
+
+.container {
+  background: hsl(217, 100%, 97%);
+  height: 88vh;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(35, 1fr);
+  height: 75vh;
+}
+.top-bx {
+  grid-column: 1/21;
+  grid-row: 1/13;
+  background-image: url(images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.btm-bx {
+  grid-row: 8/36;
+  grid-column: 2/20;
+  border-radius: 0.7rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 1em;
+}
+
+.btm-bx > h2 {
+  font-family: Ubuntu-Bold;
+  font-size: var(--font-size-2xl);
+  color: hsl(213, 96%, 18%);
+  margin-top: 0.8rem;
+}
+.btm-bx > p {
+  font-family: Ubuntu-Medium;
+  font-size: var(--font-size-lg);
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 2rem;
+}
+/* TOP-BX should be the image top section */
+
+.nxt-con {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  gap: 1em;
+}
+
+.nxt-btn {
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #d6d9e6 2px solid;
+}
+.nxt-btn:hover {
+  background: hsl(206, 94%, 87%);
+}
+.ads-on {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+}
+.tick-checked {
+  margin-left: 0.7rem;
+}
+
+.ons-radio {
+  border: 2px solid hsl(213, 96%, 18%);
+  display: flex;
+  column-gap: 0.8rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+}
+
+.ons-radio > div:last-child {
+  align-self: center;
+}
+
+input {
+  width: 1rem;
+}
+
+.ons-radio {
+  display: flex;
+}
+.ons-radio:focus-within {
+  background-color: hsl(217, 100%, 97%);
+}
+.con-ad-ons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem;
+}
+.con-ad-ons {
+  flex-grow: 1;
+}
+.con-ad-ons > p {
+  margin: 0;
+}
+.con-ad-ons > :first-child {
+  font-family: Ubuntu-Bold;
+  font-size: var(--font-size-sm);
+  color: hsl(213, 96%, 18%);
+}
+.con-ad-ons > p:nth-child(2) {
+  font-family: Ubuntu-Medium;
+  font-size: var(--font-size-xs);
+  color: hsl(231, 11%, 63%);
+}
+.price-ad-ons {
+  font-family: Ubuntu-Medium;
+  font-size: var(--font-size-xs);
+  color: hsl(243, 100%, 62%);
+  margin-right: 0.6rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+button {
+  border-radius: 7%;
+  border: none;
+  width: 6rem;
+  background: hsl(213, 96%, 18%);
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  padding: 0.9rem;
+  max-width: 100%;
+  font-family: Ubuntu-Medium;
+}
+.confirm-page {
+  background: hsl(213, 96%, 18%);
+}
+.foot-next > button:hover {
+  background: hsl(354, 84%, 57%);
+}
+.back-page {
+  background-color: hsl(0, 0%, 100%);
+  font-family: Ubuntu-Regular;
+}
+.back-page > a {
+  color: hsl(231, 11%, 63%);
+}
+.confirm-page > a {
+  color: hsl(0, 0%, 100%);
+  font-family: Ubuntu-Regular;
+}
+/* ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* HIDE BUTTON FOR KEYPAD TAKING OVER THE SCREEN */
+@media screen and (max-height: 35rem) {
+  button {
+    display: none;
+  }
+}
+
+/* ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* DESKTOP SMALL VIEW  639px plus*/
+
+@media screen and (min-width: 639px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 3em;
+    margin-left: 2em;
+  }
+
+  /* CONTAINER HIDDEN ON DESKTOP */
+
+  .container {
+    background: none;
+  }
+
+  section {
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 37rem;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem;
+    height: 34rem;
+  }
+
+  .top-bx {
+    background-image: url(images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 32rem;
+    flex-grow: 1;
+    display: grid;
+  }
+
+  .btm-bx {
+    border-radius: 0px;
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 19rem;
+    box-shadow: none;
+  }
+
+  .nxt-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 4rem;
+    margin-left: 1rem;
+    grid-row: 1/2;
+    margin-bottom: 2em;
+  }
+
+  .nxt-desc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1.28rem;
+    margin-left: 1rem;
+    grid-row: 1/2;
+    width: 7rem;
+    margin-bottom: 3em;
+    margin-right: 4em;
+    margin-left: 0;
+  }
+
+  .desc-nxt-icon > p:first-child {
+    font-family: Ubuntu-Regular;
+    font-size: 0.8rem;
+    color: hsl(229, 24%, 87%);
+    margin-bottom: 0px;
+  }
+  .desc-nxt-icon > p:last-child {
+    font-family: Ubuntu-Bold;
+    font-size: 0.9rem;
+    color: hsl(231, 100%, 99%);
+    margin-top: 0px;
+  }
+  .nxt-btn {
+    height: 1.875rem;
+    width: 1.875rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #d6d9e6 2px solid;
+    font-family: Ubuntu-Medium;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .desc-nxt-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Ubuntu-Medium;
+    color: hsl(0, 0%, 100%);
+  }
+  .nxt-btn:hover {
+    background: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+  }
+
+  button {
+    border-radius: 7%;
+    border: none;
+    background: hsl(213, 96%, 18%);
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    padding: 0.9rem;
+    max-width: 100%;
+    font-family: Ubuntu-Medium;
+    align-self: center;
+  }
+
+  .desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em;
+    margin-top: 9em;
+  }
+  /* 
+  ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+  /* HIDE FROM DESKTOP  */
+  footer {
+    display: none;
+  }
+}
+/* 
+***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* WIDTH 782px FOR BREAKPOINT */
+@media only screen and (min-width: 676px) and (max-width: 782px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 3em;
+    margin-left: 5.5em;
+  }
+
+  /* CONTAINER HIDDEN ON DESKTOP */
+
+  .container {
+    background: none;
+  }
+
+  /* 
+  ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+  /* HIDE FROM DESKTOP  */
+  footer {
+    display: none;
+  }
+}
+/*
+**>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* WIDTH 934px FOR BREAKPOINT */
+@media only screen and (min-width: 783px) and (max-width: 934px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 3em;
+    margin-left: 10.5em;
+  }
+} /*
+**>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* WIDTH 1123px FOR BREAKPOINT */
+@media only screen and (min-width: 935px) and (max-width: 1123px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 3em;
+    margin-left: 4em;
+  }
+
+  /* CONTAINER HIDDEN ON DESKTOP */
+
+  .container {
+    background: none;
+  }
+
+  section {
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 55rem;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem;
+  }
+
+  .top-bx {
+    background-image: url(images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 32rem;
+    flex-grow: 1;
+    display: grid;
+    width: 10rem;
+  }
+
+  .btm-bx {
+    border-radius: 0px;
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 19rem;
+    flex-grow: 3;
+  }
+
+  .nxt-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 4rem;
+    margin-left: 1rem;
+    grid-row: 1/2;
+    margin-bottom: 2em;
+  }
+  .desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em;
+    margin-top: 9em;
+  }
+}
+/* 
+  ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* WIDTH 1123px FOR BREAKPOINT */
+@media only screen and (min-width: 1123px) and (max-width: 1224px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 3em;
+    margin-left: 7em;
+  }
+
+  /* CONTAINER HIDDEN ON DESKTOP */
+
+  .container {
+    background: none;
+  }
+
+  section {
+    /* border: blue 2px solid; */
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 55rem;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem;
+  }
+
+  .top-bx {
+    background-image: url(images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 32rem;
+    flex-grow: 1;
+    display: grid;
+    width: 10rem;
+  }
+
+  .btm-bx {
+    border-radius: 0px;
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 19rem;
+    flex-grow: 3;
+  }
+
+  .nxt-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 4rem;
+    margin-left: 1rem;
+    grid-row: 1/2;
+    margin-bottom: 2em;
+  }
+  .desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em;
+    margin-top: 9em;
+  }
+}
+
+/* 
+  ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+
+/* WIDTH 1123px FOR BREAKPOINT */
+@media only screen and (min-width: 1225px) and (max-width: 1317px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 5em;
+    margin-left: 15em;
+  }
+
+  /* CONTAINER HIDDEN ON DESKTOP */
+
+  .container {
+    background: none;
+  }
+
+  section {
+    /* border: blue 2px solid; */
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 55rem;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem;
+  }
+
+  .top-bx {
+    background-image: url(images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 32rem;
+    flex-grow: 1;
+    display: grid;
+    width: 10rem;
+  }
+
+  .btm-bx {
+    border-radius: 0px;
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 19rem;
+    flex-grow: 3;
+  }
+
+  .nxt-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 4rem;
+    margin-left: 1rem;
+    grid-row: 1/2;
+    margin-bottom: 2em;
+  }
+  .desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em;
+    margin-top: 9em;
+  }
+}
+/* 
+  ***>>>>>>>>>>>>>>>>>>>>>>>>>>>^^^^^^^^^^^^^^^^>>>>>>>>>>>>>>>>>>>>>>>>>>>>******/
+@media only screen and (min-width: 1318px) and (max-width: 1400px) {
+  body {
+    background: hsl(217, 100%, 97%);
+    margin-top: 5em;
+    margin-left: 15em;
+  }
+
+  /* CONTAINER HIDDEN ON DESKTOP */
+
+  .container {
+    background: none;
+  }
+
+  section {
+    /* border: blue 2px solid; */
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 55rem;
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 1rem;
+  }
+
+  .top-bx {
+    background-image: url(images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 32rem;
+    flex-grow: 1;
+    display: grid;
+    width: 10rem;
+  }
+
+  .btm-bx {
+    border-radius: 0px;
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 19rem;
+    flex-grow: 3;
+  }
+
+  .nxt-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 4rem;
+    margin-left: 1rem;
+    grid-row: 1/2;
+    margin-bottom: 2em;
+  }
+  .desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em;
+    margin-top: 9em;
+  }
+}
