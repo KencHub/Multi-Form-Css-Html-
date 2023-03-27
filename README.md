@@ -27,11 +27,11 @@ Anyone is free to repo or edit it.
 
 ### Screenshot
 
-![](screenshot/Personal-info-page-screenshot.png)
-![](screenshot/Select-plan-page-screenshot.png)
-![](screenshot/Add-ons-page-screenshot.png)
-![](screenshot/Finishing-up-page-screenshot.png)
-![](screenshot/Thank-you-page-screenshot.png)
+![Personal-info-page-screenshot](https://user-images.githubusercontent.com/80060063/227814908-87ffc0ee-dda1-45ce-a7d2-eaa3ac82ea6a.png)
+![Select-plan-page-screenshot](https://user-images.githubusercontent.com/80060063/227815071-00d7e236-e6d3-44bb-92a7-232862aa0fbf.png)
+![Add-ons-page-screenshot](https://user-images.githubusercontent.com/80060063/227815089-def0e0ea-fe3e-46e7-b5f7-e1f4774dc47e.png)
+![Finishing-up-page-screenshot](https://user-images.githubusercontent.com/80060063/227815100-b03ec452-7a91-4c92-a307-174c80621c9e.png)
+![Thank-you-page-screenshot](https://user-images.githubusercontent.com/80060063/227815111-7f9ccec5-ce1f-4bfc-a296-492aebbfaf1b.png)
 
 ### Links
 
